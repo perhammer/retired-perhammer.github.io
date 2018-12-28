@@ -3,6 +3,7 @@ title: Per Hammer
 description: Multilingual mutterings of a Norwegian Glaswegian
 show_downloads: false
 google_analytics: UA-982775-2
+timezone: Europe/London
 github:
   is_project_page: false
 exclude:
