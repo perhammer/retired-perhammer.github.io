@@ -4,6 +4,16 @@ description: Multilingual mutterings of a Norwegian Glaswegian
 show_downloads: false
 google_analytics: UA-982775-2
 timezone: Europe/London
+collections:
+  health_monitors:
+    permalink: /community-playbook/health-monitors/:name:output_ext
+    output: true
+  plays:
+    permalink: /community-playbook/plays/:name:output_ext
+    output: true
+  game_plans:
+    permalink: /community-playbook/examples/:name:output_ext
+    output: true
 github:
   is_project_page: false
 exclude:
@@ -11,3 +21,4 @@ exclude:
 - Gemfile.lock
 - .DS_Store
 - .gitignore
+- atlassian

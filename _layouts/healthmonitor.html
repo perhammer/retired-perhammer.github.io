@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="author" content="Per Hammer">
+    <link rel="canonical" href="{{ page.canonical }}">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/styles/playbook-main.css" id="main-css">
+    <link rel="stylesheet" href="/styles/playbook-team-patterns.css" class="additional-css">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.pitch }}">
+    <style> .pain-point a:hover { text-decoration: none; }</style>
+    {% include head.html %}
+</head>
+<body id="team-playbook" class="wac team-playbook-landing team-playbook">
+    <main> 
+        <div class="imkt-sticky-wrapper" style="height: 60px;">
+            <nav class="imkt-navbar imkt-navbar__default imkt-sticky" style="width: 100%;">
+                <section class="imkt-navbar__main-section">
+                    <div class="grid grid-1">
+                        <div class="column colspan-all">
+                            <div class="imkt-navbar__title-wrapper" style="width: 231px;">
+                                <a href="/community-playbook" class="imkt-navbar__title-link imkt-navbar__title-link--current">
+                                    <span class="imkt-navbar__title-text">Community Playbook</span>
+                                </a>
+                            </div>
+                            <ul class="imkt-navbar__link-list">
+                                <li> <a href="/community-playbook/health-monitors" class="imkt-navbar__link-list-link">Health Monitors</a> </li>
+                                <li> <a href="/community-playbook/plays" class="imkt-navbar__link-list-link">Plays</a></li>
+                                <li> <a href="/community-playbook/examples" class="imkt-navbar__link-list-link">Game Plans</a></li>
+                                <li> <a href="/community-playbook/about" class="imkt-navbar__link-list-link">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </nav>
+        </div>
+        <!-- -->
+
+        <section class="wpl wpl__divider wpl__divider--small-yellow">
+            <div class="grid grid-1 vertical-gutters-standard vertical-padding-standard">
+                <div class="column colspan-1 text-left">
+                    <h1>Health Monitors</h1>
+                    <hr>
+                    <div class="p--oversized">
+                        <p>The Health Monitor is for all teams – period. Whether your team is high-performing, or deeply dysfunctional; no matter your level, function, or industry.&nbsp;</p>
+
+                        <p>Part cure, part preventative medicine, the Health Monitor is your team's chance to listen to each other and take an honest look in the mirror. You'll assess against eight attributes common among healthy teams, and walk away with a better understanding of your strengths (plus plans to address your weak spots).</p>
+
+                        <p>Anybody can run a Health Monitor workshop, so don't wait around for some directive from on high. YOU&nbsp;are the change you've been&nbsp;waiting&nbsp;for.&nbsp;</p>
+                    </div>
+                    <div class="center">
+                        <a href="https://vimeo.com/227967631" target="_blank" rel="noopener noreferrer" title="Play video" class="video-link tiny-icon" data-track-event="playbook.clicked.1-minute-video">
+                            <span>Don't like reading? Watch a 1-minute video instead.</span>
+                            <div class="video-link__button--play--tiny"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wpl blue dark">
+            <div class="grid grid-1 vertical-gutters-standard vertical-padding-standard">
+                <div class="column colspan-all text-center">
+                    <h2>Already know where it hurts?</h2>
+                    <p>Cut to the chase and find a play to run with your team right away.</p>
+                </div>
+            </div>
+        </section>
+        <section class="wpl imkt-equalheights-parent gray-light">
+            <div class="grid grid-3 tablet-grid-1 vertical-gutters-small vertical-padding-standard" style="margin-bottom:-2.5%;">
+                {% for attribute in page.attributes %}
+                <div class="column colspan-all text-left">
+                    <a href="/community-playbook/plays/{{ attribute.name | downcase | replace: "/", "" }}.html">
+                        <img src="/images/{{ attribute.image }}" alt="{{ attribute.description }}" width="87" height="75" align="left">
+                        <h5>{{ attribute.name }}</h5>
+                        <p>{{ attribute.description }}</p>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <section class="wpl blue dark">
+            <div class="grid grid-1 vertical-gutters-standard vertical-padding-standard">
+                <div class="column colspan-all text-center">
+                     <a href="/community-playbook/plays" class="button green-solid standard">Check out the plays</a>
+                </div>
+            </div>
+        </section>
+        <!-- -->
+        </main>
+        <footer id="footer">
+            <section class="legal-links">
+                <div class="grid grid-1">
+                    <div class="column colspan-1">
+                        <ul class="inline-content items-left container-natural">
+                            <li class="item-1 item-linkButtonImage">
+                                <img src="/images/by-nc-sa.png" alt="" class="block" width="88">
+                            </li>
+                            <li class="item-2 item-textBlock">
+                                <div class="margin-tb10">
+                                    <p>This work is licensed under a&nbsp;<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+                                    <p>This work is based on <a href="http://www.atlassian.com/team-playbook">Atlassian's Team Playbook</a>.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>
